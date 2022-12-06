@@ -94,9 +94,9 @@ nav a:hover {
   background-color: #e7e7e7;
   margin: auto;
   width: 70%;
-  height: 1100px;
   border: 3px solid #013220;
   padding: 10px;
+  overflow:auto;
 }
 .lista h3 {
   text-align: center;
@@ -111,3 +111,48 @@ nav a:hover {
   margin-left: 50px;
   float:left;
   }
+  .kalkulator1 {
+  background-color: #e7e7e7;
+  width: 70%;
+  margin:auto;
+  border: 3px solid #013220 ;
+  padding: 10px;
+  clear:both;
+    padding: 10px;
+    text-align:center;
+  }
+   .kalkulator2 {
+  background-color: #e7e7e7;
+  width: 70%;
+  margin:auto;
+  border: 3px solid #013220 ;
+  padding: 10px;
+  clear:both;
+      text-align:center;
+  }
+  #wynik1 {
+  font-size:30px;
+  
+  }
+   #wynik2 {
+  font-size:30px;
+  
+  }
+   #kalkulator1 {
+  font-size:30px;
+  
+  }
+   #kalkulator2 {
+  font-size:30px;
+  
+  }
+    .twórcy {
+  background-color: #e7e7e7;
+  width: 70%;
+  margin:auto;
+  border: 3px solid #013220 ;
+  padding: 10px;
+  clear:both;
+    padding: 10px;
+    text-align:center;
+    }

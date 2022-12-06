@@ -19,14 +19,15 @@
   <a href="#lista">Lista żywności</a>
   <a href="#kalkulator1">Kalkulator J na kcal (Dżul na Kilokalorie)</a>
   <a href="#kalkulator2">Kalkulator kcal na J (Kilokalorie na Dżul)</a>
+  <a href="#twórcy">Twórcy</a>
 </nav>
 
 <div id="boxy" class="boxy">
 <p style="font-size:20px;"> Niezdrowa żywność</p>
 <input type="text" id="TextBox1" class="boxy"   placeholder="Wpisz nazwę produktów"/>
 <p style="font-size:20px;"> Zdrowa żywność</p>
-<input type="text" id="TextBox2" class="boxy"   placeholder="Wpisz nazwę produktów"/>
-<input class="button" type="button" onClick="sprawdzanie()" Value="oblicz" />
+<input type="text" id="TextBox2" class="boxy"   placeholder="Wpisz nazwę produktów">
+<input class="button" type="button" onClick="sprawdzanie()" Value="oblicz" >
 </div>
 <div id="lista" class="lista">
 <h3> Lista zdrowych i niezdrowej żywności </h3>
@@ -74,9 +75,30 @@
 <h4>baton - 555.7 kcal/100g</h4>
 <h4>margaryna - 716.8 kcal/100g</h4>
 </div>
+</div>
+</div>
+</div>
+<div class="kalkulator1">
+<h1>Kalkulator J na kcal</h1>
+<h3> 4186J = 1 kcal </h3>
+<input type="text"   id="kalkulator1" placeholder="Podaj liczbę J" onchange="kalkulator1()"/>
+<br>
+<div id="wynik1">
 
+</div>
+</div>
 
-
+<div class="kalkulator2">
+<h1>Kalkulator kcal na J</h1>
+<h3> 1 kcal = 4186 J </h3>
+<input type="text"  id="kalkulator2"  placeholder="Podaj liczbę kcal" onchange="kalkulator2()"/>
+<br>
+<div id="wynik2">
+</div>
+</div>
+<div class="twórcy" id="twórcy">
+<h1> Stronę stworzył</h1>
+<h2> Krystian Kotlarz 3TI</h2>
 </div>
 </body>
 </html>

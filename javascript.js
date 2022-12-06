@@ -218,3 +218,13 @@ if (textBox1 == "kebab"){
     alert (wynik);
 console.log("Hello world!");
 }
+function kalkulator1() {
+   var num3 = document.getElementById("kalkulator1").value;
+   var wynik1 = (num3 / 4186)*100/100; 
+   document.getElementById('wynik1').innerHTML = "To " + wynik1 + " kcali";    
+}
+function kalkulator2() {
+   var num4 = document.getElementById("kalkulator2").value;
+   var wynik2 = (num4 * 4186)*100/100; 
+   document.getElementById('wynik2').innerHTML = "To " + wynik2 + " J";    
+}
