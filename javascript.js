@@ -214,7 +214,7 @@ if (textBox1 == "kebab"){
 }
 }
 
-    var  wynik = "Musisz zjeść " + Math.round((num1 / num2)*100)/100 + " kcal wybranego produktu";
+    var  wynik = "Musisz zjeść " + Math.round((num1 / num2)*100)/100 + " wybranego produktu";
     alert (wynik);
 console.log("Hello world!");
 }
