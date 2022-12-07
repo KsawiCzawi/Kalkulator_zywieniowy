@@ -21,11 +21,9 @@ header {
 }
 nav {
   width: 200px;
-  background-color: #256e16;
   color: white; 
   position: fixed;
   left: 0;
-  center: 0;
   border: solid 4px #013220;
 }
 
@@ -36,11 +34,13 @@ nav a {
   padding: 12px; 
   text-decoration: none; 
   border: solid 2px #d6bc0f;
-  border-style: solid solid none none;
+  border-style: solid solid;
 }
 
 nav a:hover {
   background-color: #04AA6D;
+  text-shadow: 2px 2px 4px #000000;
+  border: solid 4px #d6bc0f;
 }
 .menu {
    text-align: center;
@@ -62,7 +62,11 @@ nav a:hover {
      padding-left:30px; 
   }
 
-  
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
   
   
   
