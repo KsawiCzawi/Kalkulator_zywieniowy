@@ -21,9 +21,11 @@ header {
 }
 nav {
   width: 200px;
+  background-color: #256e16;
   color: white; 
   position: fixed;
   left: 0;
+  center: 0;
   border: solid 4px #013220;
 }
 
@@ -34,18 +36,15 @@ nav a {
   padding: 12px; 
   text-decoration: none; 
   border: solid 2px #d6bc0f;
-  border-style: solid solid;
+  border-style: solid solid none none;
 }
 
 nav a:hover {
   background-color: #04AA6D;
-  text-shadow: 2px 2px 4px #000000;
-  border: solid 4px #d6bc0f;
 }
 .menu {
    text-align: center;
    border: solid  4px #044a0d;
-   background-color: green;
 }
 .text {
     margin-left :200px;
@@ -63,20 +62,8 @@ nav a:hover {
      padding-left:30px; 
   }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  background-color: #f1f1f1;
-}
-
-li a {
-  display: block;
-  color: #000;
-  padding: 8px 16px;
-  text-decoration: none;
-}
+  
+  
   
   
   
@@ -168,4 +155,16 @@ li a {
   clear:both;
     padding: 10px;
     text-align:center;
+      clear:both
+    }
+        .kalkulator3 {
+  background-color: #e7e7e7;
+  width: 70%;
+  margin:auto;
+  border: 3px solid #013220 ;
+  padding: 10px;
+  clear:both;
+    padding: 10px;
+    text-align:center;
+      clear:both
     }
