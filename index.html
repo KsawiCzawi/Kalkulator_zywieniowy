@@ -4,7 +4,6 @@
 <title>Krystian Kotlarz 3TI</title>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="styl2.css">
-<link href="http://fonts.googleapis.com/css?family=Akaya+Kanadaka&subset=latin,latin-ext" rel="stylesheet" type="text/css">
  <script src="javascript.js"></script> 
 </head>
 <body>
@@ -15,26 +14,19 @@
 <div class="menu">
   <p>Menu</p>
   </div>
-  <ul>
-  
-   <li><a href="#boxy">Kalkulator żywnościowy</a></li>
-  
-   <li><a href="#lista">Lista żywności</a></li>
-  
-   <li><a href="#kalkulator1">Kalkulator J na kcal (Dżul na Kilokalorie)</a></li>
-  
-   <li><a href="#kalkulator2">Kalkulator kcal na J (Kilokalorie na Dżul)</a></li>
-  
-   <li><a href="#twórcy">Twórcy</a></li>
-
- </ul>
+  <a href="#boxy">Kalkulator żywnościowy</a>
+  <a href="#lista">Lista żywności</a>
+  <a href="#kalkulator1">Kalkulator J na kcal (Dżul na Kilokalorie)</a>
+  <a href="#kalkulator2">Kalkulator kcal na J (Kilokalorie na Dżul)</a>
+  <a href="#kalkulator3">Kalkulator Kalorii</a>
+  <a href="#twórcy">Twórcy</a>
 </nav>
 
 <div id="boxy" class="boxy">
 <p style="font-size:20px;"> Niezdrowa żywność</p>
-<input type="text" id="TextBox1" class="boxy"   placeholder="Wpisz nazwę produktu"/>
+<input type="text" id="TextBox1" class="boxy"   placeholder="Wpisz nazwę produktów"/>
 <p style="font-size:20px;"> Zdrowa żywność</p>
-<input type="text" id="TextBox2" class="boxy"   placeholder="Wpisz nazwę produktu">
+<input type="text" id="TextBox2" class="boxy"   placeholder="Wpisz nazwę produktów">
 <input class="button" type="button" onClick="sprawdzanie()" Value="oblicz" >
 </div>
 <div id="lista" class="lista">
@@ -88,7 +80,7 @@
 </div>
 <div class="kalkulator1">
 <h1>Kalkulator J na kcal</h1>
-<h3> 4186 J = 1 kcal </h3>
+<h3> 4186J = 1 kcal </h3>
 <input type="text"   id="kalkulator1" placeholder="Podaj liczbę J" onchange="kalkulator1()"/>
 <br>
 <div id="wynik1">
@@ -104,9 +96,60 @@
 <div id="wynik2">
 </div>
 </div>
+<div class="kalkulator3" id="kalkulator3">
+  <h1>Kalkulator kalorii</h1>
+  <p>Wprowadź swoją wagę, wzrost i wybierz swoją płeć i wiek, aby obliczyć swoje zapotrzebowanie kaloryczne:</p>
+  <form>
+    <label for="weight">Waga (w kilogramach):</label><br>
+    <input type="number" id="weight" name="weight"><br>
+    <label for="height">Wzrost (w centymetrach):</label><br>
+    <input type="number" id="height" name="height"><br>
+    <label for="gender">Płeć:</label><br>
+    <select id="gender" name="gender">
+      <option value="male">Mężczyzna</option>
+      <option value="female">Kobieta</option>
+    </select><br>
+    <label for="age">Wiek (w latach):</label><br>
+    <input type="number" id="age" name="age"><br><br>
+    <label for="activity">Aktywność fizyczna:</label><br>
+    <select name="activity" id="activity">
+              <option selected="true "value="1.2" >Dla osób prowadzących siedzący tryb życia</option>
+              <option  value="1.375">Dla osób prowadzących niezbyt aktywny tryb życia</option>
+              <option value="1.550">Dla osób prowadzących aktywny tryb życia</option>
+              <option value="1.725">Dla osób prowadzących bardzo aktywny tryb życia</option>
+              <option value="1.9">Dla osób prowadzących bardzo intensywny tryb życia</option>
+            </select><br>
+    <input type="submit" value="Oblicz">
+  </form> 
+  <p>Twoje zapotrzebowanie kaloryczne wynosi: <span id="result"></span></p>
+  <script>
+    const form = document.querySelector('form');
+    const result = document.querySelector('#result');
+
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+
+      const weight = form.weight.value;
+      const height = form.height.value;
+      const gender = form.gender.value;
+      const age = form.age.value;
+      const activity = form.activity.value;
+
+      let bmr = 0;
+      if (gender === 'male') {
+        bmr = (66 + (13.7 * weight) + (5 * height) - (6.8 * age))* activity;
+      } else if (gender === 'female') {
+        bmr = (655 + (9.6 * weight) + (1.8 * height) - (4.7 * age)) * activity;
+      }
+
+      result.textContent = bmr.toFixed(2);
+    });
+  </script>
+
+</div>
 <div class="twórcy" id="twórcy">
-<h1> Stronę stworzyli</h1>
-<h2> Krystian Kotlarz i Kamil Goguł 3TI</h2>
+<h1> Stronę stworzył</h1>
+<h2> Krystian Kotlarz 3TI i Kamil Goguł 3TI</h2>
 </div>
 </body>
 </html>
