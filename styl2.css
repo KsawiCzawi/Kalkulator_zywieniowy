@@ -1,14 +1,3 @@
-        .kalkulator3 {
-  background-color: #e7e7e7;
-  width:70%;
-  margin:auto;
-  border: 3px solid #013220 ;
-  padding: 10px;
-  clear:both;
-    padding: 10px;
-    text-align:center;
-      clear:both
-    }
 body{
     font-family: Garamond ;
     font-family: "Akaya Kanadaka", sans-serif;
@@ -52,6 +41,8 @@ nav a {
 
 nav a:hover {
   background-color: #04AA6D;
+  text-shadow: 2px 2px 4px #000000;
+  border: solid 4px #d6bc0f;
 }
 .menu {
    text-align: center;
@@ -72,12 +63,11 @@ nav a:hover {
   .boxy p{
      padding-left:30px; 
   }
-
-  
-  
-  
-  
-  
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}  
   
 .button {
   background-color: #4CAF50; /* Green */
@@ -91,7 +81,7 @@ nav a:hover {
   margin-left: 20px;
 }
 .button:hover{
-  background-color: #f44336; /* Green */
+  background-color: #f44336; 
   border: solid 3px solid #f44336;
   color: white;
   padding: 10px;
@@ -176,6 +166,6 @@ nav a:hover {
   padding: 10px;
   clear:both;
     padding: 10px;
-    text-align:center;
+        text-align:center;
       clear:both
-    }
+}
