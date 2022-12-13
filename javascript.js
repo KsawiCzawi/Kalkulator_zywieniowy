@@ -228,3 +228,26 @@ function kalkulator2() {
    var wynik2 = (num4 * 4186)*100/100; 
    document.getElementById('wynik2').innerHTML = "To " + wynik2 + " J";    
 }
+
+
+ const form = document.querySelector("form");
+    const result = document.querySelector("#result");
+
+    form.addEventListener("submit", event => {
+      event.preventDefault();
+
+      const weight = form.weight.value;
+      const height = form.height.value;
+      const gender = form.gender.value;
+      const age = form.age.value;
+      const activity = form.activity.value;
+
+      let bmr = 0;
+      if (gender === "male") {
+        bmr = (66 + (13.7 * weight) + (5 * height) - (6.8 * age))* activity;
+      } else if (gender === "female") {
+        bmr = (655 + (9.6 * weight) + (1.8 * height) - (4.7 * age)) * activity;
+      }
+
+      result.textContent = bmr.toFixed(2);
+    });
